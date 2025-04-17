@@ -1,0 +1,28 @@
+.postBox {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin: 20px;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .postInput {
+    flex: 1;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    background-color: #f0f2f5;
+    padding: 10px 15px;
+    border-radius: 20px;
+  }
+  
