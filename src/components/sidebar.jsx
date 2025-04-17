@@ -8,7 +8,7 @@ const { Sider } = Layout;
 
 const Sidebar = () => {
   return (
-    <Sider collapsible theme="light" width={200} trigger={<BarsOutlined />}  >
+    <Sider collapsible  theme="light" width={200} trigger={<BarsOutlined />}  >
 
       <div className="logo" style={{ padding: 20, fontWeight: 'bold' }}>
       <img src={fbLogo} alt="Facebook" style={{ width: '55px' }} />
