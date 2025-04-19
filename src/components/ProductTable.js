@@ -5,7 +5,7 @@ import { useData } from "../context/DataContext";
 import AddItemModal from "./AddItemModal";
 
 const ProductTable = () => {
-  const { data, loading, addItem, updateItem, deleteItem } = useData();
+  const { data, loading, deleteItem } = useData();
   const [modalVisible, setModalVisible] = useState(false);
   const [editingItem, setEditingItem] = useState(null);
 
@@ -36,7 +36,7 @@ const ProductTable = () => {
           <Button
             icon={<PauseOutlined />}
             onClick={() => {
-              setEditingItem(null); // Not editing, just adding
+              setEditingItem(null); 
               setModalVisible(true);
             }}
             style={{ marginRight: 8 }}
@@ -66,7 +66,7 @@ const ProductTable = () => {
         type="primary"
         icon={<PlusOutlined />}
         onClick={() => {
-          setEditingItem(null); // Make sure it's not editing
+          setEditingItem(null); 
           setModalVisible(true);
         }}
         style={{ marginBottom: 16 }}
