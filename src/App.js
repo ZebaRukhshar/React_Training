@@ -5,7 +5,10 @@ import Sidebar from './components/sidebar';
 import Home from './pages/home';
 import Profile from './pages/profile';
 import { DataProvider } from "./context/DataContext";
-import ProductTable from "./components/ProductTable";
+import Login from './pages/Login';
+import Logout from './pages/Logout'; // adjust path if needed
+import PrivateRoute from './components/PrivateRoute';
+import ProductTable from './components/ProductTable';
 
 const { Content } = Layout;
 
@@ -17,11 +20,23 @@ const App = () => {
         <Sidebar />
         <Layout>
           <Content style={{ padding: '24px' }}>
-            <Routes>
-              <Route path="/home" element={<Home />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/products" element={<ProductTable />} />
-            </Routes>
+          <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+
+
+        {/* Protected Routes */}
+        <Route path="/home" element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        } />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/products" element={<ProductTable />} />
+         
+        
+        
+       </Routes>
           </Content>
         </Layout>
       </Layout>
